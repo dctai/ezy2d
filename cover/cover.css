@@ -24,7 +24,6 @@ body {
   width:100%
 }
 
-
 /*
  * Header
  */
@@ -50,7 +49,43 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+.bg-jackpot{
+  background-image: url('../assets/images/jackpot_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:136px;
+}
+.text-brandred{
+  color:#FF4726;
+}
+.bg-brandred{
+  background-color: #FF4726;
+}
+.bg-brandlyellow{
+  background-color: #FFF3CD;
+}
+.bg-wo20{
+  background-color: rgba(255, 255, 255, 0.20);
+}
+.bg-yg{
+  background:linear-gradient(180deg, #FFE748 0%, #FFBA65 100%);
+}
+.bg-gg{
+  background:linear-gradient(180deg, #00B333 0%, #00A47B 100%);
+}
+.f14{
+  font-size: 14px;
+  line-height: 20px;
+}
+.rounded-5 {
+  border-radius: 0.5rem;
+}
+.rounded-24 {
+  border-radius: 24px;
+}
+.h32 {
+ height:32px;
+}
 .fixed-top-ezy {
   position: fixed;
   top: 0;
