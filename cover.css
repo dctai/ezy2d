@@ -58,6 +58,12 @@ body {
 .text-brandred{
   color:#FF4726;
 }
+.text-g{
+  color:#5c5c5c;
+}
+.fw800{
+  font-weight: 800;
+}
 .bg-brandred{
   background-color: #FF4726;
 }
@@ -96,6 +102,9 @@ body {
 .mbh20{
   margin-bottom:20px;
 }
+.mrw4{
+  margin-right:4px;
+}
 .rounded-5 {
   border-radius: 0.5rem;
 }
@@ -105,6 +114,7 @@ body {
 .h32 {
  height:32px;
 }
+
 .no-border {
   border: 0;
   box-shadow: none;
