@@ -64,6 +64,9 @@ body {
 .bg-brandlyellow{
   background-color: #FFF3CD;
 }
+.bg-lg{
+  background-color: #F0F0F0;
+}
 .bg-wo20{
   background-color: rgba(255, 255, 255, 0.20);
 }
@@ -71,11 +74,27 @@ body {
   background:linear-gradient(180deg, #FFE748 0%, #FFBA65 100%);
 }
 .bg-gg{
-  background:linear-gradient(180deg, #00B333 0%, #00A47B 100%);
+  background:linear-gradient(180deg, #0BE148 0%, #05C595 100%);
+}
+.bg-lyg{
+  background:linear-gradient(180deg, #FFF 0%, #FFF1E6 100%);
 }
 .f14{
   font-size: 14px;
   line-height: 20px;
+}
+.f12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+.mbh4{
+  margin-bottom:4px;
+}
+.mbh12{
+  margin-bottom:12px;
+}
+.mbh20{
+  margin-bottom:20px;
 }
 .rounded-5 {
   border-radius: 0.5rem;
@@ -85,6 +104,10 @@ body {
 }
 .h32 {
  height:32px;
+}
+.no-border {
+  border: 0;
+  box-shadow: none;
 }
 .fixed-top-ezy {
   position: fixed;
