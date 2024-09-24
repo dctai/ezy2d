@@ -44,16 +44,16 @@
 <div class="phone-container d-flex mx-auto flex-column bg-lyg">
 
   <main class="phone-container px-3" style="padding-bottom: 300px;">
-    
+    <!--TopInfo-->
    <div class="row g-0 mbh20">
-    <div class="col">
+    <a href="profile.html" class="col text-decoration-none">
       <div class="text-g"><img class="mrw4" src="assets/images/material-symbols_person-rounded.svg">User ID</div>
-      <div class="fw800">B000P2003</div>
-    </div>
-    <div class="col">
+      <div class="fw800 text-black">B000P2003</div>
+    </a>
+    <a href="Balance.html" class="col text-decoration-none">
       <div class="text-g"><img class="mrw4" src="assets/images/material-symbols_account-balance-wallet.svg">Balance</div>
-      <div class="fw800">90,000,000</div>
-    </div>
+      <div class="fw800 text-black">90,000,000</div>
+    </a>
     <div class="col">
       <div class="text-g"><img class="mrw4" src="assets/images/material-symbols_nest-clock-farsight-analog-rounded.svg">Time</div>
       <div class="fw800">14:05:00 PM</div>
@@ -62,11 +62,13 @@
 
     <div class="d-flex flex-column" style="gap:8px;">
 
-      <div class="rounded-24 p-1 bg-jackpot position-relative">
-        <div class="position-absolute top-50 start-50 translate-middle text-white">132423</div>
-        <div class="position-absolute bottom-0 start-50 translate-middle-x"><a href="#" class="btn text-center bg-white rounded-pill p-1 mb-1 fw-bold h32" style="width:280px;">Bet</a></div>
-      </div>
-  
+     <!-- Jackpot -->
+     <div class="rounded-24 align-items-center d-flex justify-content-center flex-column px-3 bg-jackpot text-center">
+      <img class="w-50" src="assets/images/Jackpot_Stroke.svg">
+      <div class="w-75 text-white jackpotnumbg mbh4"><span class="jackpotnum">132,423,875</span></div>
+      <a href="#" class="w-100 btn text-center bg-white rounded-pill p-1 mb-1 fw-bold h32">Bet</a>
+     </div>
+     <!-- Bet -->
       <div class="rounded-24 bg-yg">
         <div class="row g-0 align-items-center h32 px-3 mb-3 bg-wo20">
           <div class="col text-center f12">05-09-24</div>
@@ -79,7 +81,7 @@
           <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><span style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">74</span></div>
           <div class="col text-center"><div>Value</div><div class="fw-bold">1,317.22</div></div>
         </div>
-        <div class="d-grid"><button type="button" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</button></div>
+        <div class="d-grid"><a href="bet.html" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</a></div>
         </div>
       </div>
   
@@ -92,33 +94,34 @@
         <div class="px-3">
         <div class="row g-0 align-items-center" style="gap:24px;">
           <div class="col text-center"><div>Set</div><div class="fw-bold">1,317.22</div></div>
-          <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><span style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">74</span></div>
+          <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><div id="value" class="text-brandred" style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">74</div></div>
           <div class="col text-center"><div>Value</div><div class="fw-bold">1,317.22</div></div>
         </div>
-        <div class="d-grid"><button type="button" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</button></div>
+        <div class="d-grid"><a href="bet.html" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</a></div>
         </div>
       </div>
   
     </div>
   </main>
+  <!--BottomNav-->
   <div class="phone-container fixed-bottom-ezy bg-white border-top">
     <div class="row g-0 align-items-center">
     <div class="col py-3 bg-brandred">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_home-rounded.svg"></div>
       <div class="text-center text-white f12">Main</div>
     </div>
-    <div class="col">
+    <a href="pending.html" class="col text-decoration-none">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_nest-clock-farsight-analog-outline-rounded.svg"></div>
-      <div class="text-center f12">Pending</div>
-    </div>
-    <div class="col">
+      <div class="text-center text-black f12">Pending</div>
+    </a>
+    <a href="report.html" class="col text-decoration-none">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_list-alt-outline.svg"></div>
-      <div class="text-center f12">Report</div>
-    </div>
-    <div class="col">
+      <div class="text-center text-black f12">Report</div>
+    </a>
+    <a href="result.html" class="col text-decoration-none">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_playlist-add-check-circle-outline-rounded.svg"></div>
-      <div class="text-center f12">Results</div>
-    </div>
+      <div class="text-center text-black f12">Results</div>
+    </a>
     <div class="col">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_live-help-outline-rounded.svg"></div>
       <div class="text-center f12">Help</div>
@@ -126,6 +129,24 @@
   </div>
   </div>
 
+</div>
+<script>
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+  
+  const obj = document.getElementById("value");
+  animateValue(obj, 100, 74, 5000);
+  </script>
 
     
   </body>

@@ -62,7 +62,6 @@
    </div>
 
          <div class="row g-0 mbh20" style="gap:15px;">
-          <a class="col p-2 bg-lg rounded-5 text-brandred text-center font-weight-bold text-decoration-none fw800">今天</a>
           <a class="col p-2 bg-lg rounded-5 text-brandred text-center font-weight-bold text-decoration-none fw800">本周</a>
           <a class="col p-2 bg-lg rounded-5 text-brandred text-center font-weight-bold text-decoration-none fw800">上周</a>
         </div>
@@ -73,52 +72,41 @@
           <input type="date" class="col form-control bg-lg no-border rounded-5" id="endDate">
           <a class="col p-2 bg-brandred rounded-5 text-white text-center text-decoration-none" style="min-width: 48px;">加载</a>
         </div>
-
-        <!--Table-->
-        <div class="row g-0 bg-brandred py-3 px-1 rounded-5">
-          <div class="col-3 fw800 text-white text-center">日期</div>
-          <div class="col fw800 text-white text-center">单位</div>
-          <div class="col fw800 text-white text-center">金额</div>
-          <div class="col fw800 text-white text-center">损益</div>
-          <div class="col fw800 text-white text-center">结余</div>
+        
+        <!-- Bet -->
+        <div class="d-flex flex-column" style="gap:8px;">
+        <div class="rounded-24 bg-lg">
+          <div class="row g-0 align-items-center h32 px-3 mb-3 bg-wo20">
+            <div class="col text-center f12">05-09-24</div>
+            <div class="col-6 text-center f12">LUNCH TIME DRAW</div>
+            <div class="col text-center f12">00:01 PM<img src="assets/images/material-symbols_timer-rounded.svg"></div>
+          </div>
+          <div class="px-3">
+          <div class="row g-0 align-items-center mbh20" style="gap:24px;">
+            <div class="col text-center"><div>Set</div><div class="fw-bold">1,317.22</div></div>
+            <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><span style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">74</span></div>
+            <div class="col text-center"><div>Value</div><div class="fw-bold">1,317.22</div></div>
+          </div>
+          
+          </div>
         </div>
-        <div class="row g-0 py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
+    
+        <div class="rounded-24 bg-lg">
+          <div class="row g-0 align-items-center h32 px-3 mb-3 bg-wo20">
+            <div class="col text-center f12">05-09-24</div>
+            <div class="col-6 text-center f12">DINNER TIME DRAW</div>
+            <div class="col text-center f12">04:00 PM<img src="assets/images/material-symbols_timer-rounded.svg"></div>
+          </div>
+          <div class="px-3">
+          <div class="row g-0 align-items-center mbh20" style="gap:24px;">
+            <div class="col text-center"><div>Set</div><div class="fw-bold">1,317.22</div></div>
+            <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><span style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">74</span></div>
+            <div class="col text-center"><div>Value</div><div class="fw-bold">1,317.22</div></div>
+          </div>
+          
+          </div>
         </div>
-        <div class="row g-0 bg-lg py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
         </div>
-        <div class="row g-0 py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
-        </div>
-        <div class="row g-0 bg-lg py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
-        </div>
-
-        <div class="row g-0 mt-2 bg-lgreen py-3 px-1 rounded-5">
-          <div class="col-3 text-center">Total</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
-        </div>
-
 
   </main>
 
@@ -133,14 +121,14 @@
       <div class="text-center mbh4"><img src="assets/images/material-symbols_nest-clock-farsight-analog-outline-rounded.svg"></div>
       <div class="text-center text-black f12">Pending</div>
     </a>
-    <div class="col py-3 bg-brandred">
-      <div class="text-center mbh4"><img src="assets/images/material-symbols_list-alt-outlinew.svg"></div>
-      <div class="text-center text-white f12">Report</div>
-    </div>
-    <a href="result.html" class="col text-decoration-none">
-      <div class="text-center mbh4"><img src="assets/images/material-symbols_playlist-add-check-circle-outline-rounded.svg"></div>
-      <div class="text-center text-black f12">Results</div>
+    <a href="report.html" class="col text-decoration-none">
+      <div class="text-center mbh4"><img src="assets/images/material-symbols_list-alt-outline.svg"></div>
+      <div class="text-center text-black f12">Report</div>
     </a>
+    <div class="col py-3 bg-brandred">
+      <div class="text-center mbh4"><img src="assets/images/material-symbols_playlist-add-check-circle-outline-roundedw.svg"></div>
+      <div class="text-center text-white f12">Results</div>
+    </div>
     <div class="col">
       <div class="text-center mbh4"><img src="assets/images/material-symbols_live-help-outline-rounded.svg"></div>
       <div class="text-center f12">Help</div>

@@ -51,6 +51,7 @@ body {
 }
 .bg-jackpot{
   background-image: url('assets/images/jackpot_bg.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height:136px;
@@ -73,6 +74,12 @@ body {
 .bg-lg{
   background-color: #F0F0F0;
 }
+.bg-lgreen{
+  background-color: #EBFAEF;
+}
+.bg-green{
+  background-color: #00B333;
+}
 .bg-wo20{
   background-color: rgba(255, 255, 255, 0.20);
 }
@@ -85,6 +92,7 @@ body {
 .bg-lyg{
   background:linear-gradient(180deg, #FFF 0%, #FFF1E6 100%);
 }
+
 .f14{
   font-size: 14px;
   line-height: 20px;
@@ -92,6 +100,21 @@ body {
 .f12 {
   font-size: 12px;
   line-height: 16px;
+}
+.jackpotnum{
+  /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(102deg, #F1D486 27.73%, #E3A406 61.51%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.jackpotnumbg{
+  /*height: 24px;*/
+  border-radius: 40px;
+  border: 2px solid #FFE175;
+  background: linear-gradient(0deg, #B41C0B -16.67%, #4E0C05 100%);
 }
 .mbh4{
   margin-bottom:4px;
@@ -101,6 +124,10 @@ body {
 }
 .mbh20{
   margin-bottom:20px;
+}
+.pbh32andline{
+  padding-bottom:32px;
+  border-bottom:1px solid #F0F0F0;
 }
 .mrw4{
   margin-right:4px;
