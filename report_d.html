@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     
     
 
@@ -76,47 +79,80 @@
 
         <!--Table-->
         <div class="row g-0 bg-brandred py-3 px-1 rounded-5">
-          <div class="col-3 fw800 text-white text-center">日期</div>
-          <div class="col fw800 text-white text-center">单位</div>
-          <div class="col fw800 text-white text-center">金额</div>
-          <div class="col fw800 text-white text-center">损益</div>
-          <div class="col fw800 text-white text-center">结余</div>
+          <div class="col f14 fw800 text-white text-center" style="max-width: 24px;">No.</div>
+          <div class="col f14 fw800 text-white text-center" style="max-width: 36px;">号码</div>
+          <div class="col f14 fw800 text-white text-center">金额</div>
+          <div class="col f14 fw800 text-white text-center">佣金</div>
+          <div class="col f14 fw800 text-white text-center">中奖</div>
+          <div class="col f14 fw800 text-white text-center">税金</div>
+          <div class="col f14 fw800 text-white text-center">结余</div>
         </div>
-        <a href="report_d.html" class="row g-0 py-3 px-1 rounded-5 text-decoration-none">
-          <div class="col-3 text-center text-black">23/08/2024</div>
-          <div class="col text-center text-black">50</div>
-          <div class="col text-center text-black">-100,100</div>
-          <div class="col text-center text-black">+10,000</div>
-          <div class="col text-center text-black">-80,900</div>
-        </a>
-        <div class="row g-0 bg-lg py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
+
+        <div class="row g-0 rounded-5 px-1 py-2">
+          <div class="col border-right mrw4 text-center" style="max-width: 24px; line-height: 56px; border-right: 1px solid #F0F0F0; ">1</div>
+          <div class="col d-flex flex-column">
+            <div class="row g-0 mb-2">
+              <div class="col f14 text-center" style="max-width: 36px;">75</div>
+              <div class="col f14 text-center">-10,000</div>
+              <div class="col f14 text-center">1,000</div>
+              <div class="col f14 text-center">100,000</div>
+              <div class="col f14 text-center">80,900</div>
+              <div class="col f14 text-center">-8,900</div>
+            </div>
+              <div class="text-g f14" style="padding-left: 10px;"><span>交易编号</span>230824-175739-0001</div>
+           </div>
         </div>
-        <div class="row g-0 py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
+
+        <div class="row g-0 bg-lg py-2 px-1 rounded-5">
+          <div class="col border-right mrw4 text-center" style="max-width: 24px; line-height: 56px; border-right: 1px solid #D8D8D8; ">2</div>
+          <div class="col d-flex flex-column">
+            <div class="row g-0 mb-2">
+              <div class="col f14 text-center" style="max-width: 36px;">75</div>
+              <div class="col f14 text-center">-10,000</div>
+              <div class="col f14 text-center">1,000</div>
+              <div class="col f14 text-center">100,000</div>
+              <div class="col f14 text-center">80,900</div>
+              <div class="col f14 text-center">-8,900</div>
+            </div>
+              <div class="text-g f14" style="padding-left: 10px;"><span>交易编号</span>230824-175739-0001</div>
+           </div>
         </div>
-        <div class="row g-0 bg-lg py-3 px-1 rounded-5">
-          <div class="col-3 text-center">23/08/2024</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
+        <div class="row g-0 py-2 px-1 rounded-5">
+          <div class="col border-right mrw4 text-center" style="max-width: 24px; line-height: 56px; border-right: 1px solid #F0F0F0; ">3</div>
+          <div class="col d-flex flex-column">
+            <div class="row g-0 mb-2">
+              <div class="col f14 text-center" style="max-width: 36px;">75</div>
+              <div class="col f14 text-center">-10,000</div>
+              <div class="col f14 text-center">1,000</div>
+              <div class="col f14 text-center">100,000</div>
+              <div class="col f14 text-center">80,900</div>
+              <div class="col f14 text-center">-8,900</div>
+            </div>
+              <div class="text-g f14" style="padding-left: 10px;"><span>交易编号</span>230824-175739-0001</div>
+           </div>
+        </div>
+        <div class="row g-0 bg-lg py-2 px-1 rounded-5">
+          <div class="col border-right mrw4 text-center" style="max-width: 24px; line-height: 56px; border-right: 1px solid #D8D8D8; ">4</div>
+          <div class="col d-flex flex-column">
+            <div class="row g-0 mb-2">
+              <div class="col f14 text-center" style="max-width: 36px;">75</div>
+              <div class="col f14 text-center">-10,000</div>
+              <div class="col f14 text-center">1,000</div>
+              <div class="col f14 text-center">100,000</div>
+              <div class="col f14 text-center">80,900</div>
+              <div class="col f14 text-center">-8,900</div>
+            </div>
+              <div class="text-g f14" style="padding-left: 10px;"><span>交易编号</span>230824-175739-0001</div>
+           </div>
         </div>
 
         <div class="row g-0 mt-2 bg-lgreen py-3 px-1 rounded-5">
-          <div class="col-3 text-center">Total</div>
-          <div class="col text-center">50</div>
-          <div class="col text-center">-100,100</div>
-          <div class="col text-center">+10,000</div>
-          <div class="col text-center">-80,900</div>
+          <div class="col-2 f14 text-center">Total</div>
+          <div class="col f14 text-center">50</div>
+          <div class="col f14 text-center">10,000</div>
+          <div class="col f14 text-center">-100,100</div>
+          <div class="col f14 text-center">10,000</div>
+          <div class="col f14 text-center">-80,900</div>
         </div>
 
 

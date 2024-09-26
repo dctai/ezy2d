@@ -44,29 +44,29 @@
 <div class="phone-container d-flex mx-auto flex-column px-3">
  
 <div class="mbh20"><img src="assets/images/ezy2d.svg"></div>
-<div class="d-flex mbh20"><span class="w-25" style="line-height: 32px;">Enter Pin</span><input type="password" class="form-control bg-lg no-border rounded-5" id="inputPassword"></div>
-
+<div class="d-flex mbh20"><span class="w-25" style="line-height: 32px;">Enter Pin</span><input input type="text" id="display" readonly class="form-control bg-lg no-border rounded-5"></div>
 <div class="row g-0 mbh20" style="gap:15px;">
-<div class="row g-0" style="gap:15px;">
-  <div class="col p-2 bg-lg rounded-5 text-center">0</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">7</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">6</div>
+  <div class="row g-0" style="gap:15px;">
+    <button onclick="addNumber(0)" class="col p-2 bg-lg rounded-5 text-center border-0">0</button>
+    <button onclick="addNumber(1)" class="col p-2 bg-lg rounded-5 text-center border-0">1</button>
+    <button onclick="addNumber(2)" class="col p-2 bg-lg rounded-5 text-center border-0">2</button>
+  </div>
+  <div class="row g-0" style="gap:15px;">
+    <button onclick="addNumber(3)" class="col p-2 bg-lg rounded-5 text-center border-0">3</button>
+    <button onclick="addNumber(4)" class="col p-2 bg-lg rounded-5 text-center border-0">4</button>
+    <button onclick="addNumber(5)" class="col p-2 bg-lg rounded-5 text-center border-0">5</button>
+  </div>
+  <div class="row g-0" style="gap:15px;">
+    <button onclick="addNumber(6)" class="col p-2 bg-lg rounded-5 text-center border-0">6</button>
+    <button onclick="addNumber(7)" class="col p-2 bg-lg rounded-5 text-center border-0">7</button>
+    <button onclick="addNumber(8)" class="col p-2 bg-lg rounded-5 text-center border-0">8</button>
+  </div>
+  <div class="row g-0" style="gap:15px;">
+    <button onclick="addNumber(9)" class="col p-2 bg-lg rounded-5 text-center border-0">9</button>
+    <button id="clear" onclick="clearDisplay()" class="col-8 p-2 bg-lg rounded-5 text-center border-0">清除</button>
 </div>
-<div class="row g-0" style="gap:15px;">
-  <div class="col p-2 bg-lg rounded-5 text-center">8</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">9</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">3</div>
 </div>
-<div class="row g-0" style="gap:15px;">
-  <div class="col p-2 bg-lg rounded-5 text-center">5</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">1</div>
-  <div class="col p-2 bg-lg rounded-5 text-center">2</div>
-</div>
-<div class="row g-0" style="gap:15px;">
-  <div class="col p-2 bg-lg rounded-5 text-center">4</div>
-  <div class="col-8 p-2 bg-lg rounded-5 text-center">Clear</div>
-</div>
-</div>
+
 <div class="d-flex mbh20" style="gap:15px;">
   <button type="button" class="btn flex-fill bg-lg rounded-5" data-bs-dismiss="modal">关闭</button>
   <a type="button" class="flex-fill btn bg-brandred rounded-5 text-white text-decoration-none" href="indexlogin.html">确定</a>
@@ -88,6 +88,18 @@
 
 </div>
 
-    
+
+<script>
+  const display = document.getElementById('display');
+
+function addNumber(num) {
+display.value += num;
+}
+
+function clearDisplay() {
+display.value = '';
+}
+</script>
   </body>
+
 </html>
