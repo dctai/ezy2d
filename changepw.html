@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Bootstrap core CSS -->
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +34,30 @@
           font-size: 3.5rem;
         }
       }
+      #inputcontainer {
+       display: flex;
+      }
+      #inputcontainer > svg {
+       margin-left: 5px;
+      }
+      .password-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 0px;
+            border-radius: 4px;
+        }
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
     </style>
 
     
@@ -96,15 +120,26 @@
 <h4 class="my-4 fw800">更改密码</h4>
 
 <div class="d-flex flex-column pbh32andline">
-    <input type="password" class="mbh12 form-control bg-lg no-border rounded-5" placeholder="请输入原密码" id="inputPassword">
-    <input type="password" class="mbh12 form-control bg-lg no-border rounded-5" placeholder="请输入新密码" id="inputPassword">
-    <input type="password" class="mbh12 form-control bg-lg no-border rounded-5" placeholder="确认您的新密码" id="inputPassword">
+  <div class="password-container">
+    <input type="password" id="password1" placeholder="请输入原密码" class="bg-lg rounded-5">
+    <i class="toggle-password fas fa-eye" onclick="togglePassword('password1', this)"></i>
+  </div>
+  
+  <div class="password-container">
+    <input type="password" id="password2" placeholder="请输入新密码" class="bg-lg rounded-5">
+    <i class="toggle-password fas fa-eye" onclick="togglePassword('password2', this)"></i>
+  </div>
+  
+  <div class="password-container">
+    <input type="password" id="password3" placeholder="确认您的新密码" class="bg-lg rounded-5">
+    <i class="toggle-password fas fa-eye" onclick="togglePassword('password3', this)"></i>
+  </div>
     <button type="button" class="btn text-center bg-brandred text-white rounded-5 p-1 mb-3 fw-bold f14 h32" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="max-width:130px;">确定</button>
 </div>
 
 <h4 class="my-4 fw800">更改 PIN 码</h4>
 
-<input input type="text" id="display" readonly class="mbh20 form-control bg-lg no-border rounded-5" placeholder="請輸入新的PIN碼">
+<input input type="password" id="display" readonly class="mbh20 form-control bg-lg no-border rounded-5" placeholder="請輸入新的PIN碼">
 
 <div class="row g-0 mbh20" style="gap:15px;">
   <div class="row g-0" style="gap:15px;">
@@ -123,6 +158,8 @@
   </div>
   <button type="button" class="btn text-center bg-brandred text-white rounded-5 p-1 mb-3 fw-bold f14 h32" data-bs-toggle="modal" data-bs-target="#pinBackdrop" style="max-width:130px;">确定</button>
 </div>
+
+
 
   </main>
 
@@ -153,7 +190,7 @@
 </div>
 
 </div>
-
+<!--Tap Password-->
 <script>
   const display = document.getElementById('display');
 
@@ -165,6 +202,42 @@ function clearDisplay() {
 display.value = '';
 }
 </script>
+<!--Show/Hide Password-->
+<script>
+var x = document.getElementById("login-form-password");   // Input
+var s = document.getElementById("Layer_1");               // Show pass
+var h = document.getElementById("Layer_2");               // Hide pass
+
+function togglePass() {
+    if (x.type === "password") {
+        x.type = 'text';
+        s.style.display = 'none';
+        h.style.display = 'inline';
+    } else {
+        x.type = 'password';
+        s.style.display = 'inline';
+        h.style.display = 'none';
+    }   
+}
+  </script>
+
+<!--multiple Show/Hide Password-->
+  <script>
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+</script>
+
+  
     
   </body>
 </html>

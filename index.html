@@ -45,6 +45,42 @@
         .fade-out {
             opacity: 0;
         }
+      .dropbtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FF4726;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
     </style>
 
     
@@ -77,7 +113,14 @@
     <!-- Header -->
   <header class="phone-container mb-auto fixed-top-ezy bg-white px-3">
     <div class="row g-0 align-items-center">
-      <div class="col"><img src="assets/images/material-symbols_language.svg"></div>
+      <div class="col"><div class="dropdown">
+        <button class="dropbtn p-0"><img src="assets/images/material-symbols_language.svg"></button>
+        <div class="dropdown-content rounded-5">
+        <a href="#">မြန်ြာဘာသာ</a>
+        <a href="#">English</a>
+        <a href="#">中文</a>
+        </div>
+      </div></div>
       <div class="col-6 text-center"><img src="assets/images/ezy2d.svg"></div>
       <div class="col text-end">12:01:00 PM</div>
     </div>
