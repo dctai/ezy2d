@@ -81,6 +81,18 @@
 .dropdown:hover .dropbtn {
   background-color: #fff;
 }
+        .number {
+          position: absolute;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            left:0px
+        }
+        .number.active {
+            opacity: 1;
+            
+        }
     </style>
 
     
@@ -137,9 +149,6 @@
     </div>
     <!-- Jackpot -->
     <div class="rounded-24 align-items-center d-flex justify-content-center flex-column px-3 bg-jackpot text-center">
-      <img class="w-50" src="assets/images/Jackpot_Stroke.svg">
-      <div class="w-75 text-white jackpotnumbg mbh4"><span class="jackpotnum">132,423,875</span></div>
-      <a href="#" class="w-100 btn text-center bg-white rounded-pill p-1 mb-1 fw-bold h32">Bet</a>
     </div>
 
     <div class="rounded-24 bg-yg">
@@ -150,9 +159,9 @@
       </div>
       <div class="px-3">
       <div class="row g-0 align-items-center" style="gap:24px;">
-        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold">1,317.2<span class="animated-text">0</span></div></div>
-        <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><div class="animated-text small text-brandred" style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">20</div></div>
-        <div class="col text-center" style="font-size:18px;"><div>Value</div><div class="fw-bold">1,31<span class="animated-text">7</span>.22</div></div>
+        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold" id="animation1" style="position:relative; width:100%; height:20px;"><span class="number">2,257.2<span class="text-brandred">2</span></span><span class="number">1,317.2<span class="text-brandred">8</span></span></div></div>
+        <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><div class="text-brandred" style="position:relative; font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;" id="animation2"><span class="number">20</span><span class="number">43</span></div></div>
+        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold" id="animation3" style="position:relative; width:100%; height:20px;"><span class="number">20,01<span class="text-brandred">2</span>.01</span><span class="number">20,51<span class="text-brandred">3</span>.06</span></span></div></div>
       </div>
       <div class="d-grid"><button type="button" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</button></div>
       </div>
@@ -166,9 +175,9 @@
       </div>
       <div class="px-3">
       <div class="row g-0 align-items-center" style="gap:24px;">
-        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold">1,317.2<span class="animated-text">0</span></div></div>
-        <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><div class="animated-text small text-brandred" style="font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;">20</div></div>
-        <div class="col text-center" style="font-size:18px;"><div>Value</div><div class="fw-bold">1,31<span class="animated-text">7</span>.22</div></div>
+        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold" id="animation4" style="position:relative; width:100%; height:20px;"><span class="number">1,357.2<span class="text-brandred">2</span></span><span class="number">1,317.2<span class="text-brandred">8</span></span></div></div>
+        <div class="text-center bg-white rounded-pill" style="height:64px; width:64px;"><div class="text-brandred" style="position:relative; font-size:36px;line-height:64px;font-family:Rubik, sans-serif; font-weight: 900;" id="animation5"><span class="number">72</span><span class="number">5</span></div></div>
+        <div class="col text-center" style="font-size:18px;"><div>Set</div><div class="fw-bold" id="animation6" style="position:relative; width:100%; height:20px;"><span class="number">20,01<span class="text-brandred">2</span>.01</span><span class="number">26,16<span class="text-brandred">3</span>.06</span></span></div></div>
       </div>
       <div class="d-grid"><button type="button" class="btn text-center bg-white rounded-pill p-1 mb-2 fw-bold h32 mt-3">Bet</button></div>
       </div>
@@ -184,39 +193,34 @@
   </main>
 
 </div>
+
+
 <script>
-const textElements = document.querySelectorAll('.animated-text');
+  function setupAnimation(containerId) {
+            const container = document.getElementById(containerId);
+            const numbers = container.querySelectorAll('.number');
+            let currentIndex = 0;
 
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+            function rotateNumbers() {
+                numbers[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % numbers.length;
+                numbers[currentIndex].classList.add('active');
+            }
 
-function changeNumber(element, min, max) {
-    element.classList.add('fade-out');
-    
-    setTimeout(() => {
-        element.textContent = getRandomNumber(min, max);
-        element.classList.remove('fade-out');
-    }, 500);
-}
+            // 初始顯示第一個數字
+            numbers[0].classList.add('active');
 
-function animateNumbers() {
-    textElements.forEach((element, index) => {
-        if (index < 2) {
-            // 前兩個元素顯示10-99的隨機數
-            changeNumber(element, 10, 99);
-        } else {
-            // 後三個元素顯示0-9的隨機數
-            changeNumber(element, 0, 9);
+            // 每 2 秒切換一次數字
+            setInterval(rotateNumbers, 2000);
         }
-    });
-}
 
-// 初始化數字
-animateNumbers();
-
-// 每2秒更新一次數字
-setInterval(animateNumbers, 2000);
+        // 設置兩個獨立的動畫
+        setupAnimation('animation1');
+        setupAnimation('animation2');
+        setupAnimation('animation3');
+        setupAnimation('animation4');
+        setupAnimation('animation5');
+        setupAnimation('animation6');
 </script>
 
     
