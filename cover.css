@@ -16,8 +16,7 @@
  * Base structure
  */
 
-body {
-}
+
 
 .phone-container {
   max-width: 460px;
@@ -51,7 +50,7 @@ body {
 }
 .bg-jackpot{
   background-image: url('assets/images/23r3f43gf.jpg');
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   height:136px;
@@ -91,6 +90,7 @@ body {
 }
 .bg-lyg{
   background:linear-gradient(180deg, #FFF 0%, #FFF1E6 100%);
+  height:100vh;
 }
 
 .f14{

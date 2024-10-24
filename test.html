@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>EZY2D</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .slider-container {
+            width: 32px;
+            height: 32px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .title {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex bg-white mb-auto">
+    
+<div class="phone-container d-flex mx-auto flex-column">
+
+  <main class="phone-container px-3" style="padding-bottom: 100px;">
+   
+    <div class="slider-container">
+      <div class="slider" id="slider1">
+          <img class="slide active" src="assets/images/material-symbols_home-roundedbk.svg" alt="Slider 1 Image 1">
+          <img class="slide" src="assets/images/material-symbols_list-alt-outline.svg" alt="Slider 1 Image 2">
+      </div>
+  </div>
+
+  <div class="slider-container">
+      <div class="slider" id="slider2">
+          <img class="slide active" src="assets/images/material-symbols_list-alt-outline.svg" alt="Slider 2 Image 1">
+          <img class="slide" src="assets/images/material-symbols_playlist-add-check-circle-outline-rounded.svg" alt="Slider 2 Image 2">
+      </div>
+  </div>
+
+  <div class="slider-container">
+      <div class="slider" id="slider3">
+          <img class="slide active" src="assets/images/material-symbols_playlist-add-check-circle-outline-rounded.svg" alt="Slider 3 Image 1">
+          <img class="slide" src="assets/images/material-symbols_home-roundedbk.svg" alt="Slider 3 Image 2">
+      </div>
+  </div>
+  <div style="width:30px;height:30px;">
+    <svg-animate trigger="on">
+      <svg viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:anim="http://www.w3.org/2000/anim" anim="" anim:transform-origin="50% 50%" anim:duration="1" anim:ease="ease-in-out">
+        <g id="Frame 5">
+          <g id="Group 1" anim:scale="0.5[0:0.2:1:ease-in-out][0.2:0.3:0.8:ease-in-out]" anim:rotation="0[0:0.2:20:ease-in-out][0.2:0.3:0:ease-in-out]">
+            <path id="2" d="M7.1605 29.7234C6.95287 29.7234 6.77355 29.6479 6.62255 29.4969C6.47154 29.3459 6.39604 29.1666 6.39604 28.9589V26.0143C6.39604 25.9011 6.42436 25.684 6.48098 25.3631C6.53761 25.0234 6.74524 24.7308 7.10387 24.4854L7.41532 24.2589C9.39725 22.8244 11.0489 21.6163 12.3702 20.6348C13.7103 19.6533 14.7107 18.8133 15.3714 18.1149C16.0509 17.3977 16.3906 16.7653 16.3906 16.2179C16.3906 15.9537 16.3435 15.6989 16.2491 15.4535C16.1547 15.2081 15.8621 15.0854 15.3714 15.0854C14.9939 15.0854 14.7013 15.1798 14.4936 15.3685C14.286 15.5384 14.135 15.7366 14.0406 15.9631C13.9463 16.1896 13.8708 16.3784 13.8141 16.5294C13.7198 16.7936 13.5687 16.973 13.3611 17.0673C13.1724 17.1428 12.9459 17.1806 12.6816 17.1806H7.35869C7.18881 17.1806 7.03781 17.124 6.90568 17.0107C6.79243 16.8786 6.7358 16.7276 6.7358 16.5577C6.75468 15.4818 6.98118 14.5191 7.41532 13.6697C7.86833 12.8015 8.48179 12.0559 9.25569 11.433C10.0296 10.8101 10.9356 10.3382 11.9738 10.0173C13.0119 9.67757 14.135 9.50769 15.343 9.50769C17.0607 9.50769 18.5519 9.76251 19.8166 10.2722C21.0812 10.7629 22.0627 11.4802 22.7611 12.424C23.4595 13.3677 23.8087 14.5097 23.8087 15.8499C23.8087 16.888 23.5539 17.8507 23.0443 18.7378C22.5346 19.625 21.8174 20.4744 20.8925 21.286C19.9864 22.0788 18.92 22.8999 17.6931 23.7493L17.4949 23.8909H23.469C23.6766 23.8909 23.8559 23.9664 24.0069 24.1174C24.1579 24.2684 24.2334 24.4477 24.2334 24.6553V28.9589C24.2334 29.1666 24.1579 29.3459 24.0069 29.4969C23.8559 29.6479 23.6766 29.7234 23.469 29.7234H7.1605Z" fill="url(#paint0_linear_407_252)"></path>
+            <path id="2 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M7.00029 23.6855C8.98087 22.252 10.6299 21.0458 11.948 20.0666L11.9519 20.0637C13.2786 19.0921 14.2395 18.2814 14.8571 17.6285C15.5028 16.9469 15.6828 16.4853 15.6828 16.2179C15.6828 16.0781 15.6634 15.944 15.6245 15.8134C15.6151 15.8115 15.6045 15.8096 15.5927 15.8077C15.5384 15.7992 15.4656 15.7932 15.3714 15.7932C15.1082 15.7932 15.0077 15.8578 14.9698 15.8923L14.9561 15.9047L14.9419 15.9164C14.8156 16.0197 14.7396 16.126 14.694 16.2354C14.6024 16.4552 14.531 16.6339 14.4786 16.7734C14.3351 17.1713 14.0727 17.5214 13.654 17.7117L13.6392 17.7185L13.624 17.7245C13.3307 17.8419 13.0102 17.8884 12.6816 17.8884H7.35869C7.01538 17.8884 6.70201 17.7684 6.44502 17.5481L6.40368 17.5127L6.36825 17.4714C6.14797 17.2144 6.02796 16.901 6.02796 16.5577V16.5515L6.02807 16.5453C6.04859 15.3755 6.29588 14.3046 6.78503 13.3476L6.78774 13.3423C7.28656 12.3862 7.96306 11.5648 8.81186 10.8816C9.66028 10.1987 10.6459 9.68758 11.7591 9.34279C12.8739 8.97866 14.0702 8.79985 15.343 8.79985C17.1269 8.79985 18.7104 9.06399 20.0769 9.61391C21.4445 10.1454 22.5412 10.9367 23.3301 12.0029C24.1311 13.0854 24.5166 14.3805 24.5166 15.8499C24.5166 17.0098 24.2302 18.0943 23.658 19.0904C23.1027 20.0571 22.3312 20.9652 21.3593 21.818L21.3586 21.8187C20.847 22.2664 20.2875 22.7211 19.6806 23.183H23.469C23.8702 23.183 24.2279 23.3373 24.5074 23.6168C24.7869 23.8963 24.9413 24.254 24.9413 24.6553V28.9589C24.9413 29.3602 24.7869 29.7179 24.5074 29.9974C24.2279 30.2769 23.8702 30.4312 23.469 30.4312H7.16049C6.75923 30.4312 6.40154 30.2769 6.12203 29.9974C5.84252 29.7179 5.6882 29.3602 5.6882 28.9589V26.0143C5.6882 25.83 5.72852 25.5543 5.78339 25.2431C5.87978 24.6718 6.22715 24.2302 6.69519 23.9074L7.00029 23.6855ZM7.10387 24.4854C6.74523 24.7308 6.5376 25.0234 6.48097 25.3631C6.42435 25.684 6.39603 25.9011 6.39603 26.0143V28.9589C6.39603 29.1666 6.47154 29.3459 6.62254 29.4969C6.77355 29.6479 6.95286 29.7234 7.16049 29.7234H23.469C23.6766 29.7234 23.8559 29.6479 24.0069 29.4969C24.1579 29.3459 24.2334 29.1666 24.2334 28.9589V24.6553C24.2334 24.4477 24.1579 24.2684 24.0069 24.1174C23.8559 23.9663 23.6766 23.8908 23.469 23.8908H17.4949L17.693 23.7493C17.9677 23.5591 18.2344 23.3703 18.493 23.183C19.3895 22.5336 20.1893 21.9013 20.8924 21.286C21.8174 20.4744 22.5346 19.625 23.0443 18.7378C23.5539 17.8507 23.8087 16.888 23.8087 15.8499C23.8087 14.5097 23.4595 13.3677 22.7611 12.424C22.0627 11.4802 21.0812 10.7629 19.8165 10.2721C18.5519 9.7625 17.0607 9.50768 15.343 9.50768C14.135 9.50768 13.0119 9.67756 11.9738 10.0173C10.9356 10.3382 10.0296 10.8101 9.25568 11.433C8.48178 12.0559 7.86833 12.8015 7.41531 13.6697C6.98118 14.5191 6.75467 15.4818 6.73579 16.5577C6.73579 16.7276 6.79242 16.8786 6.90567 17.0107C7.0378 17.124 7.18881 17.1806 7.35869 17.1806H12.6816C12.9458 17.1806 13.1724 17.1428 13.3611 17.0673C13.5687 16.973 13.7197 16.7936 13.8141 16.5294C13.8707 16.3784 13.9463 16.1896 14.0406 15.9631C14.135 15.7366 14.286 15.5384 14.4936 15.3685C14.7013 15.1798 14.9938 15.0854 15.3714 15.0854C15.8621 15.0854 16.1547 15.2081 16.2491 15.4535C16.3434 15.6989 16.3906 15.9537 16.3906 16.2179C16.3906 16.7653 16.0509 17.3977 15.3714 18.1149C14.7107 18.8133 13.7103 19.6533 12.3701 20.6348C11.0489 21.6163 9.39725 22.8244 7.41531 24.2589L7.10387 24.4854Z" fill="#FF9292"></path>
+          </g>
+        </g>
+        <defs>
+          <linearGradient id="paint0_linear_407_252" x1="15.3728" y1="5.65708" x2="15.3728" y2="33.9704" gradientUnits="userSpaceOnUse">
+            <stop></stop>
+            <stop offset="1" stop-color="#FE4F4F"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </svg-animate>
+  </div>
+  
+  <lottie-player src="https://lottie.host/65cef800-21e9-4d36-aeb8-2ec3f9ff13be/TdCl87yRMf.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;"autoplay></lottie-player>
+
+  </main>
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+  function setupSlider(sliderId, interval = 3000) {
+      const slider = document.getElementById(sliderId);
+      const slides = slider.getElementsByClassName('slide');
+      let currentSlide = 0;
+
+      function showNextSlide() {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+      }
+
+      setInterval(showNextSlide, interval);
+  }
+
+  // 設置三個輪播器，使用不同的切換間隔時間
+  setupSlider('slider1', 1000); // 3秒
+  setupSlider('slider2', 1000); // 4秒
+  setupSlider('slider3', 1000); // 5秒
+</script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@figmania/loader/build/index.umd.js"></script>
+  </body>
+</html>
