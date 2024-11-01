@@ -55,6 +55,13 @@
   background-size: cover;
   height:136px;
 }
+.bg-homebg{
+  background-image: url('assets/images/Home-purbg.jpg');
+  background-position: top top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+}
 .text-brandred{
   color:#FF4726;
 }
