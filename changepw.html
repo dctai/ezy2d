@@ -57,6 +57,64 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
+        .input-group {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .input-display {
+            width: 100%;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        .toggle-icon:hover {
+            color: #333;
+        }
+
+
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .group-title {
+            color: #666;
+            margin-top: 0;
+        }
 
     </style>
 
@@ -139,24 +197,30 @@
 
 <h4 class="my-4 fw800">更改 PIN 码</h4>
 
-<input input type="password" id="display" readonly class="mbh20 form-control bg-lg no-border rounded-5" placeholder="請輸入新的PIN碼">
-
-<div class="row g-0 mbh20" style="gap:15px;">
-  <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(0)" class="col p-2 bg-lg rounded-5 text-center border-0">0</button>
-    <button onclick="addNumber(1)" class="col p-2 bg-lg rounded-5 text-center border-0">1</button>
-    <button onclick="addNumber(2)" class="col p-2 bg-lg rounded-5 text-center border-0">2</button>
-    <button onclick="addNumber(4)" class="col p-2 bg-lg rounded-5 text-center border-0">3</button>
-    <button onclick="addNumber(5)" class="col p-2 bg-lg rounded-5 text-center border-0">4</button>
+<div id="group1">
+  <div class="input-container">
+    <div class="d-flex mbh20">
+      <input type="password" readonly class="input-display form-control no-border rounded-5" style="background-color: #f0f0f0;">
+      <i class="toggle-icon fas fa-eye-slash" style="font-size:16px;" onclick="toggleInputType('group1')"></i>
+    </div>
   </div>
-  <div class="row g-0" style="gap:15px;">
-    <button onclick="addNumber(6)" class="col p-2 bg-lg rounded-5 text-center border-0">6</button>
-    <button onclick="addNumber(7)" class="col p-2 bg-lg rounded-5 text-center border-0">7</button>
-    <button onclick="addNumber(8)" class="col p-2 bg-lg rounded-5 text-center border-0">8</button>
-    <button onclick="addNumber(9)" class="col p-2 bg-lg rounded-5 text-center border-0">9</button>
-    <button onclick="addNumber(0)" class="col p-2 bg-lg rounded-5 text-center border-0">0</button>
+  <div class="row g-0 mbh20" style="gap:15px;">
+    <div class="row g-0" style="gap:15px;">
+      <button onclick="addNumber('group1', '1')" class="col p-2 bg-lg rounded-5 text-center border-0">1</button>
+      <button onclick="addNumber('group1', '2')" class="col p-2 bg-lg rounded-5 text-center border-0">2</button>
+      <button onclick="addNumber('group1', '3')" class="col p-2 bg-lg rounded-5 text-center border-0">3</button>
+      <button onclick="addNumber('group1', '4')" class="col p-2 bg-lg rounded-5 text-center border-0">4</button>
+      <button onclick="addNumber('group1', '5')" class="col p-2 bg-lg rounded-5 text-center border-0">5</button>
+    </div>
+    <div class="row g-0" style="gap:15px;">
+      <button onclick="addNumber('group1', '6')" class="col p-2 bg-lg rounded-5 text-center border-0">6</button>
+      <button onclick="addNumber('group1', '7')" class="col p-2 bg-lg rounded-5 text-center border-0">7</button>
+      <button onclick="addNumber('group1', '8')" class="col p-2 bg-lg rounded-5 text-center border-0">8</button>
+      <button onclick="addNumber('group1', '9')" class="col p-2 bg-lg rounded-5 text-center border-0">9</button>
+      <button onclick="addNumber('group1', '0')" class="col p-2 bg-lg rounded-5 text-center border-0">0</button>
+    </div>
+    <button type="button" class="btn text-center bg-brandred text-white rounded-5 p-1 mb-3 fw-bold f14 h32" data-bs-toggle="modal" data-bs-target="#pinBackdrop" style="max-width:130px;">确定</button>
   </div>
-  <button type="button" class="btn text-center bg-brandred text-white rounded-5 p-1 mb-3 fw-bold f14 h32" data-bs-toggle="modal" data-bs-target="#pinBackdrop" style="max-width:130px;">确定</button>
 </div>
 
 
@@ -189,38 +253,9 @@
 </div>
 </div>
 
+
+
 </div>
-<!--Tap Password-->
-<script>
-  const display = document.getElementById('display');
-
-function addNumber(num) {
-display.value += num;
-}
-
-function clearDisplay() {
-display.value = '';
-}
-</script>
-<!--Show/Hide Password-->
-<script>
-var x = document.getElementById("login-form-password");   // Input
-var s = document.getElementById("Layer_1");               // Show pass
-var h = document.getElementById("Layer_2");               // Hide pass
-
-function togglePass() {
-    if (x.type === "password") {
-        x.type = 'text';
-        s.style.display = 'none';
-        h.style.display = 'inline';
-    } else {
-        x.type = 'password';
-        s.style.display = 'inline';
-        h.style.display = 'none';
-    }   
-}
-  </script>
-
 <!--multiple Show/Hide Password-->
   <script>
         function togglePassword(inputId, icon) {
@@ -235,6 +270,32 @@ function togglePass() {
                 icon.classList.add("fa-eye");
             }
         }
+</script>
+<script>
+  function addNumber(groupId, number) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value += number;
+  }
+
+  function clearDisplay(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      input.value = '';
+  }
+
+  function toggleInputType(groupId) {
+      const input = document.querySelector(`#${groupId} .input-display`);
+      const icon = document.querySelector(`#${groupId} .toggle-icon`);
+      
+      if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+      } else {
+          input.type = 'password';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+      }
+  }
 </script>
 
   
