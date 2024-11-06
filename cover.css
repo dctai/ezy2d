@@ -62,11 +62,42 @@
   background-size: cover;
   height:100vh;
 }
+.bg-btng{
+  background-image: url('assets/images/btn-g.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:52px;
+}
 .text-brandred{
   color:#FF4726;
 }
 .text-g{
   color:#5c5c5c;
+}
+.text-dg{
+  color:#999999;
+}
+.text-gold{
+  color:#F1D789;
+}
+.text-goldg{
+  background: var(--Gold, linear-gradient(180deg, #ECC46B 0%, #FFCC5B 50.5%, #735106 50.51%, #E8B23A 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-bgred{
+  background: #FF4726;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-wgoldg{
+  background: var(--Bright-Gold, linear-gradient(0deg, #ECDFC4 25%, #D3C6A8 53.4%, #866F3D 77.5%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .fw800{
   font-weight: 800;
@@ -98,6 +129,25 @@
 .bg-lyg{
   background:linear-gradient(180deg, #FFF 0%, #FFF1E6 100%);
   height:100vh;
+}
+.bg-bkg{
+  background: linear-gradient(0deg, #000 0%, #443B36 100%);
+}
+.bg-goldg{
+  background: linear-gradient(180deg, #F2E5C3 0%, #715210 100%);
+}
+.bg-bk{
+  background-color: #000000;
+  height:100vh;
+}
+.bg-dkb{
+  background-color: #201500;
+}
+.bg-dkg{
+  background-color: #2A231E;
+}
+.bg-dkr{
+  background-color: #480000;
 }
 
 .f14{
